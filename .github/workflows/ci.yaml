@@ -72,6 +72,9 @@ jobs:
       - name: install pytest
         run: pip install pytest
 
+      - name: install uwsgi
+        run: pip install uwsgi
+
       - name: Run Tests
         run: pipenv run test
 
