@@ -57,8 +57,8 @@ jobs:
         run: |
           pipenv install --dev
 
-      - name: Set Python Path
-        run: export PYTHONPATH=/home/runner/work/b-ack-end/b-ack-end:$PYTHONPATH
+      # - name: Set Python Path
+      #   run: export PYTHONPATH=/home/runner/work/b-ack-end/b-ack-end:$PYTHONPATH
 
       # - name: create environment
       #   run: |
@@ -82,7 +82,6 @@ jobs:
         run: echo "Tests failed. Please check and fix the issues."
 
   build:
-    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -105,7 +104,7 @@ jobs:
       #   run: pipenv run serve
 
       - name: Run Build
-        run: pipenv run build
+        run: docker build
 
       - name: Run echo
         run: echo "Done."
