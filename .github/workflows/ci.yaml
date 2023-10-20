@@ -5,6 +5,8 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - '/**'
 
 jobs:
   lint:
@@ -69,7 +71,7 @@ jobs:
       #   run: pip install pytest
 
       - name: Run Tests
-        run: pipenv run serve
+        run: pipenv run test
 
       - name: Handle Test Errors
         if: failure()
