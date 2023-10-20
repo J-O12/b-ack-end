@@ -58,6 +58,18 @@ jobs:
           cd ./
           pipenv install --dev
 
+      - name: create environment
+        run: pipenv shell
+
+      - name: install flask-cors
+        run: pip install flask-cors
+
+      - name: install flask
+        run: pip install flask
+
+      - name: install pytest
+        run: pip install pytest
+
       - name: Run Tests
         run: pipenv run test
 
