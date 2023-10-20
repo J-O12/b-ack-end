@@ -50,6 +50,9 @@ jobs:
       - name: Python path
         run: echo $PYTHONPATH
 
+      - name: Set Python Path
+        run: export PYTHONPATH=/home/runner/work/b-ack-end/b-ack-end:$PYTHONPATH
+
       - name: Install pipenv
         run: pip install pipenv
 
