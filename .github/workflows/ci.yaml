@@ -54,19 +54,19 @@ jobs:
         run: |
           pipenv install --dev
 
-      - name: create environment
-        run: |
-          python -m venv myenv
-          source myenv/bin/activate
+      # - name: create environment
+      #   run: |
+      #     python -m venv myenv
+      #     source myenv/bin/activate
 
-      - name: install flask-cors
-        run: pip install flask-cors
+      # - name: install flask-cors
+      #   run: pip install flask-cors
 
-      - name: install flask
-        run: pip install flask
+      # - name: install flask
+      #   run: pip install flask
 
-      - name: install pytest
-        run: pip install pytest
+      # - name: install pytest
+      #   run: pip install pytest
 
       - name: Run Tests
         run: pipenv run test
