@@ -104,7 +104,7 @@ jobs:
       #   run: pipenv run serve
 
       - name: Run Build
-        run: pipenv run build .
+        run: docker build .
 
       - name: Run echo
         run: echo "Done."
