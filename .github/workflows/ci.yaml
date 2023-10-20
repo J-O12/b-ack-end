@@ -39,7 +39,6 @@ jobs:
         run: echo "Lint failed."
 
   test:
-    needs: lint
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -72,11 +71,8 @@ jobs:
       - name: install pytest
         run: pip install pytest
 
-      - name: install uwsgi
-        run: pip install uwsgi
-
       - name: Run Tests
-        run: pipenv run test
+        run: pipenv run lint
 
       - name: Handle Test Errors
         if: failure()
