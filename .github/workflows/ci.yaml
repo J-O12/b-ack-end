@@ -23,7 +23,6 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          cd ./
           pipenv install --dev      
 
 
@@ -32,7 +31,6 @@ jobs:
 
       - name: Run Lint
         run: pipenv run lint 
-        working-directory: ./
 
       - name: Handle Lint Errors
         if: failure()
@@ -54,7 +52,6 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          cd ./
           pipenv install --dev
 
       - name: create environment
@@ -73,7 +70,6 @@ jobs:
 
       - name: Run Tests
         run: pipenv run test
-        working-directory: ./
 
       - name: Handle Test Errors
         if: failure()
