@@ -49,6 +49,9 @@ jobs:
         with:
           python-version: 3.9.13
 
+      - name: Python path
+        run: echo $PYTHONPATH
+
       - name: Install pipenv
         run: pip install pipenv
 
