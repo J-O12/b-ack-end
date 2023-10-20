@@ -1,4 +1,4 @@
-from . import app
+from .__init__ import app
 import os
 
 
